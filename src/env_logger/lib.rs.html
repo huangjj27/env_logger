@@ -1274,6 +1274,12 @@
 <span id="1273">1273</span>
 <span id="1274">1274</span>
 <span id="1275">1275</span>
+<span id="1276">1276</span>
+<span id="1277">1277</span>
+<span id="1278">1278</span>
+<span id="1279">1279</span>
+<span id="1280">1280</span>
+<span id="1281">1281</span>
 </pre><div class="example-wrap"><pre class="rust ">
 <span class="comment">// Copyright 2014-2015 The Rust Project Developers. See the COPYRIGHT</span>
 <span class="comment">// file at the top-level directory of this distribution and at</span>
@@ -1907,6 +1913,12 @@
     <span class="doccomment">/// Configures the timestamp to use nanosecond precision.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">format_timestamp_nanos</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">format_timestamp</span>(<span class="prelude-val">Some</span>(<span class="ident">fmt</span>::<span class="ident">TimestampPrecision</span>::<span class="ident">Nanos</span>))
+    }
+
+    <span class="doccomment">/// Configures the end of line suffix.</span>
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">format_suffix</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">suffix</span>: <span class="kw-2">&amp;</span><span class="lifetime">&#39;static</span> <span class="ident">str</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">Self</span> {
+        <span class="self">self</span>.<span class="ident">format</span>.<span class="ident">format_suffix</span> <span class="op">=</span> <span class="ident">suffix</span>;
+        <span class="self">self</span>
     }
 
     <span class="doccomment">/// Adds a directive to the filter for a specific module.</span>
